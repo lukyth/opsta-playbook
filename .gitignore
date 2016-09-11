@@ -18,3 +18,4 @@ vault*
 *.crt
 *.key
 .DS_Store
+venv

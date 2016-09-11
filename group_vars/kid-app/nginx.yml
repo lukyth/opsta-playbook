@@ -1,0 +1,15 @@
+---
+service_name: kid-app
+os_instance:
+  image: xenial-server-cloudimg-amd64
+  key_name: kid
+  flavor: m1.small
+  network: external-network
+  security_groups: default
+  volume_size: 16
+  project_name: opsta
+  ansible_user: ubuntu
+  groups: metrabyte
+  count: 1
+
+automated_docker_name: nginx

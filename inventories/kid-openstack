@@ -1,0 +1,15 @@
+# NOTE: For role opsta.host_preparation
+# YOU MUST HAVE ansible_port variable OR ELSE REBOOT TASK WON'T WORK
+
+[pre-web]
+kid-1 ansible_user=ubuntu ansible_host=103.30.125.144 ansible_port=22
+
+[prd-web]
+kid-2 ansible_user=ubuntu ansible_host=103.30.125.145 ansible_port=22
+
+[prd-db]
+kid-3 ansible_user=ubuntu ansible_host=103.30.125.146 ansible_port=22
+
+[prd:children]
+prd-web
+prd-db
